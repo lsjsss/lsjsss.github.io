@@ -27,27 +27,49 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
         <link rel="shortcut icon" href="css/avatar.ico" />
+		<style>
+			source {
+			min-width: 100%;
+			min-height: 100%;
+			height: auto;
+			width: auto;
+			}
+			
+			video {
+				object-fit:cover;
+				position: fixed;
+				right: 0px;
+				bottom: 0px;
+				min-width: 100%;
+				max-height: 100%;
+				height: auto;
+				width: auto;
+				background-size: cover;
+				// background-image: url('../../assets/背景.jpg');
+				/*加滤镜*/
+				/*filter: blur(15px); //背景模糊设置 */
+				/*-webkit-filter: grayscale(100%);*/
+				/*filter:grayscale(100%); //背景灰度设置*/
+				z-index: -11;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container demo-1">
 		  <div class="content">
-				<div id="large-header" class="large-header">
+				<div id="large-header" >
+					<video autoplay muted id="bgvid">
+						<source src="./赤峰学院毕业视频.mp4" type="video/mp4" />
+					  </video>
                     <font size="3" style="width: 506px; margin: top;" color="#FFFFFF">
-						<a href="http://beian.miit.gov.cn/" target="_blank" style="color: aliceblue; text-decoration: none">蒙ICP备20001381号</a>
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://pms.littp.top" target="_blank" style="color: aliceblue; ">采购管理系统</a>&nbsp;&nbsp;</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://td.littp.top" target="_blank" style="color: aliceblue; ">陶笛简谱*</a>&nbsp;&nbsp;</p>
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://blog.csdn.net/weixin_44340129?spm=1000.2115.3001.5343" target="_blank" style="color: aliceblue; text-decoration: none">@2022 Li</a></p>
+						<a href="http://beian.miit.gov.cn/" target="_blank" style="color: rgb(255, 255, 255); text-decoration: none">蒙ICP备20001381号</a>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://pms.littp.top" target="_blank" style="color: rgb(255, 255, 255); ">采购管理系统</a>&nbsp;&nbsp;</p>
 					</font>
                     <canvas id="demo-canvas"></canvas>
-                    <h1 class="main-title">你好<span class="thin">世界</span><br>
-					Hello <span class="thin"> World</span></h1>
+                    <h1 class="main-title">以梦为马,<span class="thin">不负韶华</span><br>
+				</h1>
 				</div>
 		  </div>
-		</div><!-- /container -->
-        
-	<script src="js/TweenLite.min.js"></script>
-		<script src="js/EasePack.min.js"></script>
-		<script src="js/rAF.js"></script>
-		<script src="js/demo-1.js"></script>
+		</div>
 	</body>
 </html>

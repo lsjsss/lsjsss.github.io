@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>陶笛测试</title>
+		<style type="text/css">
+			.hang {
+				position: relative;
+				display: inline;
+				line-height: 60px;
+			}
+
+			.dan {
+				position: absolute;
+				left: 14px;
+				top: -5px;
+			}
+
+			.gy {
+				color: red;
+				font-weight: bold;
+			}
+
+			#zanc {
+				position: absolute;
+				right: 0%;
+			}
+
+			#zanc textarea {
+				height: 100px;
+				width: 240px;
+			}
+
+			#jianp {}
+
+			#ci {
+				width: 50%;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<span id="zanc">
+			暂存框：<br>
+			<textarea>=3=-613323221-6-613325323=3=-613323221-6-613321-51-6=0=3356536683323553223556333335653668332355322353568666890665358666890653565330090=3=6653232-6=0=65600985366689066535866689066535653=5=-333236653232-6=0=65689876536
+</textarea>
+		</span>
+
+		歌词：<button onclick="zhengl()">整理</button><br>
+		<span>
+			<textarea id="ci" onchange="zhengl()">只叹她回眸秋水被隐去只忆她点破去日苦多借三两苦酒方知离不可只叹她将思念摇-落心多憔悴--爱付与东流的水舍命奉陪抵不过天公不作美往事回味--不过是弹指一挥日复日望穿秋水恕我愚昧-你爱着谁-心徒留几道伤-我锁着眉-最是相思断人肠劳燕分飞-寂寥的夜里泪两行烛短遗憾长故人自难忘你爱着谁-心徒留几道伤-爱多可悲-恨彼此天涯各一方冷月空对-满腹愁无处话凄凉我爱不悔可孤-影难成双心多憔悴爱付与东流的水舍命奉陪抵不过天公不作美往事回味不过是弹指一挥日复日望穿秋水恕我愚昧-你爱着谁-心徒留几道伤-我锁着眉最是相思断人肠劳燕分飞-寂寥的夜里泪两行烛短遗憾长故人自难忘你爱着谁心徒留几道伤爱多可悲恨彼此天涯各一方冷月空对满腹愁无处话凄凉我爱不悔可孤影难成双你爱着谁-心徒留几道伤-我锁着眉最是相思断人肠劳燕分飞寂寥的夜里泪两行烛短遗憾长故人自难忘
+</textarea>
+		</span><br>
+
+		<span id="jianp">
+			简谱：<br>
+			<input id="yin" />
+			<button onclick="create()">生成</button>
+		</span>
+
+		<div id="qupu"></div>
+		<script type="text/javascript">
+			function zhengl() {
+				let zc = ci.value.replace(/(\n)/g, "");
+				ci.value = zc;
+			}
+
+			var sd = 0;
+			var j = 0;
+
+			function create() {
+
+				let shuz1 = yin.value.split("");
+				let shuz2 = (ci.value.split(""));
+
+				let str_y = "";
+				var uu = "";
+				for (let i = 0; i < shuz1.length; i++) {
+					if (shuz1[i] == "=" && shuz1[i + 2] == "=") {
+						sd = Number(shuz1[i + 1]);
+						shuz1.splice(i, 3);
+					}
+
+					if (shuz1[i] == "+") {}
+
+					if (shuz1[i] == "-") {
+						let fus = 7 - Number(shuz1[i + 1]);
+						let yf = "-" + fus;
+						shuz1[i] = yf;
+						shuz1.splice(i + 1, 1);
+					}
+					let y = Number(shuz1[i]) + sd;
+					let c = shuz2[j];
+					if (y == 10) {
+						y = 0;
+					}
+					if (y == 11) {
+						y = 0;
+						c = "<font class='gy'>" + shuz2[j] + "</font>";
+					}
+					str_y += "<div class='hang'><img src='zhifaTu/" + y + ".jpg'><div class='dan'>" + c + "</div></div>";
+					j++;
+				}
+
+				str_y += "<button onclick='shanc(this)'>.</button>";
+				let ju = document.createElement("div");
+				ju.innerHTML = str_y;
+				qupu.appendChild(ju);
+				sd = 0;
+			}
+
+			function shanc(o) {
+				let fu = o.parentNode;
+				j -= fu.children.length - 1;
+				o.parentNode.remove();
+			}
+		</script>
+	</body>
+</html>
