@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<!--<meta charset="UTF-8" />-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta content="always" name="referrer">
+        <meta name="theme-color" content="#2932e1">
+        
+		<title>Mr.Li</title>
+		<meta name="description" content="Free Bootstrap 4 Theme by uicookies.com">
+		<meta name="keywords" content="">
+
+		<meta name="description" content="Examples for creative website header animations using Canvas and JavaScript" />
+		<meta name="keywords" content="header, canvas, animated, creative, inspiration, javascript" />
+		<meta name="author" content="Codrops" />
+		<!--<link rel="shortcut icon" href="../favicon.ico">-->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!--<link href='http://fonts.useso.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>-->
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+        <link rel="shortcut icon" href="css/avatar.ico" />
+		<style>
+			source {
+			min-width: 100%;
+			min-height: 100%;
+			height: auto;
+			width: auto;
+			}
+			
+			video {
+				object-fit:cover;
+				position: fixed;
+				right: 0px;
+				bottom: 0px;
+				min-width: 100%;
+				max-height: 100%;
+				height: auto;
+				width: auto;
+				background-size: cover;
+				// background-image: url('../../assets/背景.jpg');
+				/*加滤镜*/
+				/*filter: blur(15px); //背景模糊设置 */
+				/*-webkit-filter: grayscale(100%);*/
+				/*filter:grayscale(100%); //背景灰度设置*/
+				z-index: -11;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container demo-1">
+		  <div class="content">
+				<div id="large-header" >
+					<video autoplay muted id="bgvid">
+						<source src="./赤峰学院毕业视频.mp4" type="video/mp4" />
+					  </video>
+                    <font size="3" style="width: 506px; margin: top;" color="#FFFFFF">
+						<a href="http://beian.miit.gov.cn/" target="_blank" style="color: rgb(255, 255, 255); text-decoration: none">蒙ICP备20001381号</a>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://pms.littp.top" target="_blank" style="color: rgb(255, 255, 255); ">采购管理系统</a>&nbsp;&nbsp;</p>
+					</font>
+                    <canvas id="demo-canvas"></canvas>
+                    <h1 class="main-title">以梦为马,<span class="thin">不负韶华</span><br>
+				</h1>
+				</div>
+		  </div>
+		</div>
+	</body>
+</html>
