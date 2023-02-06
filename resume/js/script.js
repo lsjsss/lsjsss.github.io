@@ -133,10 +133,6 @@ function CampusVoice() {
   document.getElementById("img_StuLead").src = "./img/project/StudentLeaders/CampusVoice.png"; 
   showClosePicture_StuLead();
 }
-function TutorialLongPicture() {
-  document.getElementById("img_StuLead").src = "./img/project/StudentLeaders/TutorialLongPicture.jpg"; 
-  showClosePicture_StuLead();
-}
 function NewMap() {
   document.getElementById("img_StuLead").src = "./img/project/StudentLeaders/NewMap.jpg"; 
   showClosePicture_StuLead();
