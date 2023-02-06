@@ -92,6 +92,12 @@ function hiddenimg_StuLead() {
 function hiddenimg_ProExp() { 
   document.getElementById("img_ProExp").src =" "; 
 } 
+function hiddenvid_ProExp() { 
+  document.getElementById("vid_ProExp").src =" ";
+  document.getElementById("vid_ProExp").height = "0";
+  document.getElementById("vid_ProExp").width  = "0";
+  document.getElementById("vid_ProExp").frameborder = "0";
+} 
 function hiddenimg_ConWin() { 
   document.getElementById("img_ConWin").src =" "; 
 } 
@@ -123,15 +129,32 @@ function schoolReport() {
 
 
 
+function CampusVoice() {
+  document.getElementById("img_StuLead").src = "./img/project/StudentLeaders/CampusVoice.png"; 
+  showClosePicture_StuLead();
+}
+function TutorialLongPicture() {
+  document.getElementById("img_StuLead").src = "./img/project/StudentLeaders/TutorialLongPicture.jpg"; 
+  showClosePicture_StuLead();
+}
 function NewMap() {
-  document.getElementById("img_StuLead").src = "./img/project/NewMap.jpg"; 
+  document.getElementById("img_StuLead").src = "./img/project/StudentLeaders/NewMap.jpg"; 
+  showClosePicture_StuLead();
+}
+function WelcomePoster() {
+  document.getElementById("img_StuLead").src = "./img/project/StudentLeaders/WelcomePoster.jpg"; 
   showClosePicture_StuLead();
 }
 
 
 
 
-
+function ProjectExperienceVid() { 
+  document.getElementById("vid_ProExp").src = "https://player.youku.com/embed/XNTkwMDA4NTgzNg=="; 
+  document.getElementById("vid_ProExp").height = "400px";
+  document.getElementById("vid_ProExp").width  = "100%";
+  showCloseVideo_ProExp();
+} 
 function ReadingBlindUML() {
   document.getElementById("img_ProExp").src = "./img/project/ProjectExperience/ReadingBlindUML.png"; 
   showClosePicture_ProExp();
@@ -185,6 +208,10 @@ function KnowledgeCompetition() {
 } 
 function WebsiteDesignCompetition() { 
   document.getElementById("img_ConWin").src = "./img/competition/2018网页设计大赛.jpg"; 
+  showClosePicture_ConWin();
+} 
+function WebsiteDesignCompetitionProject() { 
+  document.getElementById("img_ConWin").src = "./img/project/ContestWinning/WebsiteDesign.jpg"; 
   showClosePicture_ConWin();
 } 
 function PPTCompetition() { 
@@ -456,6 +483,70 @@ function delClosePicture_ProExp() {
   function myFunction() {
     // getElementsByTagName() 方法返回所有同一类型的标签
     var myCollection = document.getElementsByTagName("image_ProExp");
+    var i;
+    for (i = 0; i < myCollection.length; i++) {
+        // 对标签的属性进行修改
+        myCollection[i].style.color = "red";
+    }
+  }
+}
+
+
+
+
+
+//显示关闭视频按钮 ProExp (项目经历)
+function showCloseVideo_ProExp(){
+  if(document.getElementById("Close_ProExp_vid")) {
+    
+  } else {
+    // 将节点插入指定标签之后
+    // 创建一个p标签对象
+    var para = document.createElement("input");
+    para.id = 'Close_ProExp_vid';
+    para.type = 'button';
+    para.value = '关闭视频';
+    para.onclick = function() {
+      hiddenvid_ProExp();
+      delCloseVideo_ProExp();
+    };
+    // 创建文本对象
+    var node = document.createTextNode(" ");
+    // 将文本对象加入p标签对象
+    para.appendChild(node);
+    // 选出id=Study的标签
+    var element = document.getElementById("CloseButton_ProExp");
+    // 在该标签之后加上刚创建的input标签
+    element.appendChild(para);
+    // 将节点插到指定标签之前
+    var para = document.createElement("img_ProExp");
+    var node = document.createTextNode(" ");
+    para.appendChild(node);
+    var element = document.getElementById("CloseButton_ProExp");
+    var child = document.getElementById("img_ProExp");
+    // var action = document.getElementById("test").type="button";
+    element.insertBefore(para, child);
+  }
+}
+
+//删除关闭视频按钮 ProExp (项目经历)
+function delCloseVideo_ProExp() {
+  // 删除存在的标签
+  // 以下代码是已知要查找的子元素，然后查找其父元素，再删除这个子元素（删除节点必须知道父节点）：
+  var parent = document.getElementById("CloseButton_ProExp");
+  var child = document.getElementById("Close_ProExp_vid");
+  parent.removeChild(child);
+  // 替换标签
+  var para = document.createElement("input");
+  // var node = document.createTextNode("这是一个新的按钮。");
+  para.appendChild(node);
+  var parent = document.getElementById("CloseButton_ProExp");
+  var child = document.getElementById("Close_ProExp_vid");
+  parent.replaceChild(para, child);
+  // 选出所有同一类型的标签 获取HTMLCollection 对象。
+  function myFunction() {
+    // getElementsByTagName() 方法返回所有同一类型的标签
+    var myCollection = document.getElementsByTagName("img_ProExp");
     var i;
     for (i = 0; i < myCollection.length; i++) {
         // 对标签的属性进行修改
