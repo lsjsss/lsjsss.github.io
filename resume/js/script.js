@@ -279,7 +279,10 @@ function ScholarshipOnSocialWork2() {
   document.getElementById("img_Honor").src = "./img/honor/2019-2020年社会工作奖学金.jpg"; 
   showClosePicture_Honor();
 } 
-
+function CSDN2022BlogStar() { 
+  document.getElementById("img_Honor").src = "./img/honor/CSDN2022BlogStar.png"; 
+  showClosePicture_Honor();
+} 
 
 
 
