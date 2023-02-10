@@ -83,20 +83,32 @@
 
 
 
-// function printdata() {
-//   window.document.body.innerHTML=window.document.getElementById("print").innerHTML;
-//   if (!!window.ActiveXObject || "ActiveXObject" in window) {
-//     pagesetup_null();
-//   }
-//   window.print();
-//   // location.reload();
-// }
-//  function pri() {
-//     if (!!window.ActiveXObject || "ActiveXObject" in window) {
-//         pagesetup_null();
-//     }
-//     window.print();
-// }
+function printdata() {
+  // 获取当前页面html代码
+  var currentHtml = window.document.body.innerHTML
+
+
+  // 设置打印开始位置
+  // var start = '<!--startprint-->'
+  // 设置打印结束位置
+  // var end = '<!--endprint-->'
+  // 获取到要打印部分的代码
+  // var printHtml = currentHtml.substring(currentHtml.indexOf(start) + start.length, currentHtml.indexOf(end))
+
+
+  // 也可以通过id获取
+  var printHtml = document.getElementById('print').innerHTML
+  
+
+  // 打印
+  window.document.body.innerHTML = printHtml
+  if (!!window.ActiveXObject || "ActiveXObject" in window) {
+    pagesetup_null();
+  }
+  window.print()
+  // 返回原界面
+  window.document.body.innerHTML = currentHtml
+}
 function pagesetup_null() {
     var hkey_root, hkey_path, hkey_key;
     hkey_root = "HKEY_CURRENT_USER";
@@ -109,28 +121,7 @@ function pagesetup_null() {
         RegWsh.RegWrite(hkey_root + hkey_path + hkey_key, "");
     } catch (e) { }
 }
-function printdata() {
-  // 获取当前页面html代码
-  var currentHtml = window.document.body.innerHTML
-  // 设置打印开始位置
-  var start = '<!--startprint-->'
-  // 设置打印结束位置
-  var end = '<!--endprint-->'
-  // 获取到要打印部分的代码
-  var printHtml = currentHtml.substring(currentHtml.indexOf(start) + start.length, currentHtml.indexOf(end))
 
-  // 也可以通过id获取
-  //var printHtml = document.getElementById('main').innerHTML
-  
-  // 打印
-  window.document.body.innerHTML = printHtml
-  if (!!window.ActiveXObject || "ActiveXObject" in window) {
-    pagesetup_null();
-  }
-  window.print()
-  // 返回原界面
-  window.document.body.innerHTML = currentHtml
-}
 
 
 
