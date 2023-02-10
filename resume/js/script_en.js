@@ -176,6 +176,16 @@
 
 
 
+function printdata() {
+  window.document.body.innerHTML=window.document.getElementById("print").innerHTML;
+  window.print();
+  location.reload()
+}
+
+
+
+
+
 function hiddenimg_EduBg() { 
   document.getElementById("img_EduBg").src =" "; 
 } 
