@@ -89,7 +89,7 @@ function printdata() {
     pagesetup_null();
   }
   window.print();
-  location.reload();
+  // location.reload();
 }
  function pri() {
     if (!!window.ActiveXObject || "ActiveXObject" in window) {
