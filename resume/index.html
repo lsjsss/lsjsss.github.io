@@ -420,12 +420,33 @@
                   </div>
                 </div>
                 <hr/>
-                <div style="text-indent:2em;" class="e-content" itemprop="articleBody">
+                <div class="e-content" itemprop="articleBody">
+                  <b>技术实现</b></br>
+                </div>
+                <div style="text-indent:2em;" >
                   <p>
                     <div>
-                      <a>程序由Arduino通过串口将程序烧录到主板中，在程序设定运动的同时使用超声波传感器实时反馈距离情况，通过pixy视觉传感器搜索指定图像特征的物体以跟踪目标，后通过红外传感器判断与目标之间的距离在达到可操作范围时来控制机械臂的电机对目标进行抓取。</a></br>
+                      <a>
+                        设计机器人运动控制逻辑，通过Arduino(C/C++)完成嵌入式程序开发并部署至主控板；
+                      </a></br>
+                    </div>
+                    <div>
+                      <a>
+                        集成超声波、红外传感器和Pixy视觉传感器，实现目标识别、距离反馈与路径调整；
+                      </a></br>
+                    </div>
+                    <div>
+                      <a>
+                        实现目标物体识别与自动定位，控制机械臂完成抓取动作。
+                      </a></br>
                     </div>
                   </p>
+                </div>
+                <div class="e-content" itemprop="articleBody">
+                  <b>关键词</b>
+                  <a>
+                    Arduino(C/C++)、嵌入式开发、传感器融合、自动化
+                  </a></br>
                 </div>
                 <footer class="article-footer"></footer>
 
@@ -447,12 +468,33 @@
                   </div>
                 </div>
                 <hr/>
-                <div style="text-indent:2em;" class="e-content" itemprop="articleBody">
+                <div class="e-content" itemprop="articleBody">
+                  <b>技术实现</b></br>
+                </div>
+                <div style="text-indent:2em;" >
                   <p>
                     <div>
-                      <a>按照实际需求确定数据模型后，设计了数据库相应的字段名与数据类型，并使用SQL Developer完成了增删改查、视图、存储过程与触发器的数据实施与维护。</a></br>
+                      <a>
+                        根据业务需求确定数据模型，设计数据库表结构，定义字段、数据类型及约束条件；
+                      </a></br>
+                    </div>
+                    <div>
+                      <a>
+                        使用SQL Developer完成数据表设计及增删改查(CRUD)、视图、存储过程与触发器；
+                      </a></br>
+                    </div>
+                    <div>
+                      <a>
+                        支持教材信息、订单数据的规范化管理与维护。
+                      </a></br>
                     </div>
                   </p>
+                </div>
+                <div class="e-content" itemprop="articleBody">
+                  <b>关键词</b>
+                  <a>
+                    数据库设计、SQL Developer(SQL)、存储过程、关系型数据库、数据建模
+                  </a></br>
                 </div>
                 <footer class="article-footer"></footer>
 
@@ -474,11 +516,24 @@
                   </div>
                 </div>
                 <hr/>
-                <div style="text-indent:2em;" class="e-content" itemprop="articleBody">
+                <div class="e-content" itemprop="articleBody">
+                  <b>技术实现</b></br>
+                </div>
+                <div style="text-indent:2em;" >
                   <p>
                     <div>
                       <a>
-                        借助百度AI开放平台API接口完成了语音指令控制功能以完成相应操作，并结合图像识别功能完成了对含有文字材料的提取、文字转语音，实现集语音识别、语音输出、朗读文本于一体的Windows应用程序，同时完成了在不同硬件状态下的软件测试
+                        基于百度AI开放平台API，实现语音识别与语音指令控制功能；
+                      </a></br>
+                    </div>
+                    <div>
+                      <a>
+                        集成OCR技术，实现图像文字提取并转换为语音输出；
+                      </a></br>
+                    </div>
+                    <div>
+                      <a>
+                        开发基于Java的Windows应用程序，并在不同硬件环境下完成功能测试与稳定性测试
                         <a title="查看程序UML" type="button" value="NewMap" onclick="ReadingBlindUML()">
                           <img style="width: 15px;" src="./img/Search.png">
                         </a>
@@ -486,6 +541,12 @@
                       </a></br>
                     </div>
                   </p>
+                </div>
+                <div class="e-content" itemprop="articleBody">
+                  <b>关键词</b>
+                  <a>
+                    百度AI API、OCR、语音识别、Windows应用(Java)
+                  </a></br>
                 </div>
                 <footer class="article-footer"></footer>
 
@@ -507,12 +568,33 @@
                   </div>
                 </div>
                 <hr/>
-                <div style="text-indent:2em;" class="e-content" itemprop="articleBody">
+                <div class="e-content" itemprop="articleBody">
+                  <b>技术实现</b></br>
+                </div>
+                <div style="text-indent:2em;" >
                   <p>
                     <div>
-                      <a>在开源Face-recognition人脸识别模块的基础上增加对人像处理的能力，通过对面部特征的分析，识别到五官后对其依照程序指定的方式进行处理，实现了在识别出面部特征后的人脸美妆、实时人脸模糊功能。</a></br>
+                      <a>
+                        基于开源face-recognition模块，实现人脸检测与面部特征分析；
+                      </a></br>
+                    </div>
+                    <div>
+                      <a>
+                        在人脸特征识别基础上，实现实时人脸模糊与基础美妆效果处理；
+                      </a></br>
+                    </div>
+                    <div>
+                      <a>
+                        支持摄像头采集画面进行实时图像处理输出。
+                      </a></br>
                     </div>
                   </p>
+                </div>
+                <div class="e-content" itemprop="articleBody">
+                  <b>关键词</b>
+                  <a>
+                    Python、人脸识别、面部分析、图像处理
+                  </a></br>
                 </div>
                 <footer class="article-footer"></footer>
 
@@ -534,12 +616,33 @@
                   </div>
                 </div>
                 <hr/>
-                <div style="text-indent:2em;" class="e-content" itemprop="articleBody">
+                <div class="e-content" itemprop="articleBody">
+                  <b>技术实现</b></br>
+                </div>
+                <div style="text-indent:2em;" >
                   <p>
                     <div>
-                      <a>使用MVC框架完成了系统的基本借还功能、图书管理、不同角色的权限分配及检索功能，并通过JSTL标签判断功能来验证用户ID以有效防止越权访问以及使用SQL预编译以防止Web渗透。</a></br>
+                      <a>
+                        基于MVC架构实现基本的借还功能、图书管理、用户权限控制与检索功能；
+                      </a></br>
+                    </div>
+                    <div>
+                      <a>
+                        结合JSTL标签与后端权限校验逻辑，防止用户越权访问；
+                      </a></br>
+                    </div>
+                    <div>
+                      <a>
+                        采用SQL预编译方式防御常见Web注入风险。
+                      </a></br>
                     </div>
                   </p>
+                </div>
+                <div class="e-content" itemprop="articleBody">
+                  <b>关键词</b>
+                  <a>
+                    Java Web、MVC、SQL Server、JSTL、权限控制、Web 安全
+                  </a></br>
                 </div>
 
                 <div class="leftdiv" style="width: 100%;">
